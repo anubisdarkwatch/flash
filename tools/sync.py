@@ -56,8 +56,8 @@ def main():
             continue
         name = os.path.basename(path)
         data = open(path, "rb").read()
-        # merged images start with the bootloader header 0xE9: at 0x0 (S3/C3/...) or at 0x1000 (classic ESP32)
-        if not (data[:1] == b"\xe9" or (len(data) > 0x1000 and data[0x1000:0x1001] == b"\xe9")):
+        # merged images start with the bootloader header 0xE9: at 0x0 (S3/C3/...), 0x1000 (classic ESP32) or 0x2000 (P4)
+        if not (data[:1] == b"\xe9" or any(len(data) > o and data[o:o + 1] == b"\xe9" for o in (0x1000, 0x2000))):
             problems.append(f"{b['id']}: {name} doesn't start with an ESP image header (0xE9); is it a merged .bin?")
             continue
         dst = os.path.join(SITE, "firmware", name)

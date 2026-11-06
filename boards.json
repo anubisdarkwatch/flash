@@ -99,13 +99,26 @@
       "boot": "Usually connects; if not, unplug and retry right after plugging in."
     },
     {
+      "id": "tab5-beat-command",
+      "project": "beat",
+      "title": "Beat Command Center",
+      "board": "M5Stack Tab5",
+      "chip": "ESP32-P4",
+      "role": "Console",
+      "desc": "The big booth screen: beat ring, huge BPM, tempo graph and touch pads to take the beat over. Plug the Beat Gateway into its USB-A port as its radio.",
+      "prefix": "Tab5-Beat-Command",
+      "image": "img/tab5-command.jpg",
+      "erases": "Screen orientation.",
+      "boot": "Hold reset about 2 s until the green LED blinks fast, then INSTALL."
+    },
+    {
       "id": "xiao-beat-gateway",
       "project": "beat",
       "title": "Beat Gateway",
       "board": "Seeed XIAO ESP32-S3",
       "chip": "ESP32-S3",
       "role": "Gateway",
-      "desc": "Hears the beat link and plugs into your laptop or Pi as a USB MIDI clock. Add the Beat Hub script for Ableton Link, OSC and a live page.",
+      "desc": "Hears the beat link and plugs into your laptop or Pi as a USB MIDI clock, or into the Tab5 as its radio. Add Beat Hub for Ableton Link, OSC and a live page.",
       "prefix": "Beat-Gateway-XIAO-S3",
       "image": "img/beat-gateway.jpg",
       "erases": "MIDI note / transport / channel settings.",
