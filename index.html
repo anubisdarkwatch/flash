@@ -188,7 +188,7 @@
       ? `v${esc(fw.version)} · ${kb(fw.bytes)} · updated ${esc(fw.updated)}`
       : `<span class="missing">No firmware file found yet.</span>`;
     const action = fw
-      ? `<esp-web-install-button manifest="manifests/${esc(b.id)}.json">
+      ? `<esp-web-install-button manifest="manifests/${esc(b.id)}.json?v=${esc(fw.version)}">
            <button class="install" slot="activate">INSTALL</button>
            <span class="unsup" slot="unsupported">Needs Chrome or Edge on desktop.</span>
            <span class="unsup" slot="not-allowed">Needs an https:// page.</span>
