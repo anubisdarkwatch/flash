@@ -99,6 +99,19 @@
       "boot": "Usually connects; if not, unplug and retry right after plugging in."
     },
     {
+      "id": "xiao-beat-gateway",
+      "project": "beat",
+      "title": "Beat Gateway",
+      "board": "Seeed XIAO ESP32-S3",
+      "chip": "ESP32-S3",
+      "role": "Gateway",
+      "desc": "Hears the beat link and plugs into your laptop or Pi as a USB MIDI clock. Add the Beat Hub script for Ableton Link, OSC and a live page.",
+      "prefix": "Beat-Gateway-XIAO-S3",
+      "image": "img/beat-gateway.jpg",
+      "erases": "MIDI note / transport / channel settings.",
+      "boot": "A new XIAO connects as is. Re-flashing: hold B, tap R, let go of B, then INSTALL."
+    },
+    {
       "id": "tscan-tdisplay",
       "project": "tscan",
       "title": "T-Scan",

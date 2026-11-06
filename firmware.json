@@ -42,6 +42,13 @@
       "sha256": "8fae63bfb231498e70669935dc6182b7729c23caa6f5ee37981b50ab9ebf74d0",
       "updated": "2026-11-06"
     },
+    "xiao-beat-gateway": {
+      "file": "Beat-Gateway-XIAO-S3-v1.0.bin",
+      "version": "1.0",
+      "bytes": 958464,
+      "sha256": "ca991b76b02c0140f3ade0b449002a4317caf97614dc957ee3f9a00498d454ac",
+      "updated": "2026-11-06"
+    },
     "tscan-tdisplay": {
       "file": "T-Scan-v1.3-tdisplay.bin",
       "version": "1.3",
