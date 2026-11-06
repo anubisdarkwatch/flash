@@ -1,0 +1,44 @@
+# Pulls the newest .bin from each firmware repo and refreshes the install manifests.
+# Runs daily, and on demand from the Actions tab ("Run workflow").
+name: Sync firmware
+
+on:
+  schedule:
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-firmware
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch firmware repos
+        run: |
+          mkdir -p _src
+          for repo in $(python3 -c "import json;print(' '.join(p['repo'] for p in json.load(open('boards.json'))['projects']))"); do
+            git clone --depth 1 "https://github.com/$repo.git" "_src/${repo##*/}"
+          done
+
+      - name: Copy binaries and write manifests
+        run: python3 tools/sync.py _src
+
+      - name: Commit if anything changed
+        run: |
+          rm -rf _src
+          git add -A firmware manifests firmware.json
+          if git diff --cached --quiet; then
+            echo "Firmware already up to date."
+          else
+            git config user.name "flash-station-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Sync firmware from source repos"
+            git push
+          fi

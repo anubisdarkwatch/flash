@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flash Station · Anubis Darkwatch</title>
+<meta name="description" content="Flash Anubis Darkwatch firmware (W10 Beat Conductor, T-Scan, ISM Waterfall) straight from your browser. No Arduino IDE needed.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Flash Station · Anubis Darkwatch">
+<meta property="og:description" content="Pick your board, click Install. Open-source ESP32 firmware, flashed from the browser.">
+<meta property="og:image" content="img/w10-conductor.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Cpath d='M14 50 L26 14 L32 30 L38 14 L50 50' fill='none' stroke='%23ffb000' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Egyptian+Hieroglyphs&text=%F0%93%83%A3&display=block" rel="stylesheet">
+<script type="module" src="https://unpkg.com/esp-web-tools@10.4.0/dist/web/install-button.js?module"></script>
+<style>
+  :root {
+    --bg: #000; --panel: #07090a; --line: #1c2422; --text: #c8d0cc; --dim: #7d8a85;
+    --amber: #ffb000; --green: #39ff14; --red: #ff3b4a;
+    --mono: "Share Tech Mono", ui-monospace, Menlo, Consolas, monospace;
+    --head: "Orbitron", "Share Tech Mono", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 var(--mono);
+    min-height: 100vh; overflow-x: hidden;
+  }
+  body::after {                               /* CRT scanlines */
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 50;
+    background: repeating-linear-gradient(to bottom, rgba(255,255,255,.025) 0 1px, transparent 1px 3px);
+  }
+  a { color: var(--green); text-decoration: none; }
+  a:hover, a:focus-visible { text-decoration: underline; }
+  :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+
+  /* HUD bracket frame */
+  .hud { position: relative; }
+  .hud::before, .hud::after {
+    content: ""; position: absolute; width: 22px; height: 22px; border: 2px solid var(--amber); pointer-events: none;
+  }
+  .hud::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+  .hud::after { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+
+  header { padding: 44px 0 20px; }
+  .masthead { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+  .glyph { font: 64px/1 "Noto Sans Egyptian Hieroglyphs", "Segoe UI Historic", sans-serif; color: var(--amber); text-shadow: 0 0 18px rgba(255,176,0,.45); }
+  h1 {
+    font: 900 clamp(30px, 6vw, 56px)/1 var(--head); margin: 0; letter-spacing: .04em; color: #fff;
+    text-shadow: 0 0 22px rgba(255,176,0,.25);
+  }
+  h1 span { color: var(--amber); }
+  .sub { margin: 8px 0 0; color: var(--dim); }
+  .tag { color: var(--green); letter-spacing: .12em; text-transform: lowercase; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 28px 0 8px; padding: 0; list-style: none; }
+  .steps li { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; }
+  .steps b { font: 700 13px var(--head); color: var(--amber); letter-spacing: .1em; display: block; margin-bottom: 4px; }
+
+  .warn {
+    display: none; margin: 18px 0 0; padding: 12px 16px; border: 1px solid var(--red); color: #ffd3d6;
+    background: rgba(255,59,74,.08);
+  }
+  .warn.show { display: block; }
+  .warn b { color: var(--red); }
+
+  nav.filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 30px 0 6px; }
+  nav.filters button {
+    font: 700 12px var(--head); letter-spacing: .12em; text-transform: uppercase; cursor: pointer;
+    background: transparent; color: var(--dim); border: 1px solid var(--line); padding: 9px 14px;
+  }
+  nav.filters button[aria-pressed="true"] { color: #000; background: var(--amber); border-color: var(--amber); }
+  nav.filters button:hover { color: var(--text); border-color: var(--dim); }
+  nav.filters button[aria-pressed="true"]:hover { color: #000; }
+
+  section.project { margin: 34px 0 10px; }
+  .phead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap;
+           border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 18px; }
+  h2 { font: 900 22px var(--head); margin: 0; color: #fff; letter-spacing: .06em; }
+  h2::before { content: "// "; color: var(--green); }
+  .pblurb { color: var(--dim); margin: 4px 0 0; flex-basis: 100%; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 18px; }
+
+  .card { background: var(--panel); border: 1px solid var(--line); display: flex; flex-direction: column; min-width: 0; }
+  .card:hover { border-color: #2d3a36; }
+  .shot { position: relative; aspect-ratio: 16 / 10; background: #050606; overflow: hidden; border-bottom: 1px solid var(--line); }
+  .shot img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(1.05) contrast(1.05); }
+  .chips { position: absolute; left: 10px; top: 10px; display: flex; gap: 6px; }
+  .chip { font: 700 11px var(--head); letter-spacing: .1em; padding: 4px 8px; background: rgba(0,0,0,.78); border: 1px solid var(--amber); color: var(--amber); }
+  .chip.soc { border-color: var(--green); color: var(--green); }
+  .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  h3 { font: 900 18px/1.2 var(--head); margin: 0; color: #fff; letter-spacing: .03em; }
+  .board { color: var(--green); font-size: 14px; }
+  .desc { margin: 0; font-size: 14.5px; }
+  .meta { color: var(--dim); font-size: 13px; }
+  details { font-size: 13px; color: var(--dim); border-top: 1px dashed var(--line); padding-top: 8px; }
+  summary { cursor: pointer; color: var(--text); }
+  details p { margin: 6px 0 0; }
+  details b { color: var(--amber); font-weight: normal; }
+  .actions { margin-top: auto; padding-top: 6px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .install {
+    font: 900 14px var(--head); letter-spacing: .14em; cursor: pointer; color: #000; background: var(--amber);
+    border: 0; padding: 12px 20px; clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  }
+  .install:hover { background: #ffc640; box-shadow: 0 0 18px rgba(255,176,0,.45); }
+  .install:active { transform: translateY(1px); }
+  .unsup { font-size: 13px; color: var(--red); }
+  .dl { font-size: 13px; }
+  .missing { color: var(--red); font-size: 13px; }
+
+  footer { margin: 56px 0 0; padding: 26px 0 40px; border-top: 1px solid var(--line); color: var(--dim); font-size: 14px; }
+  footer .row { display: flex; gap: 18px; flex-wrap: wrap; justify-content: space-between; }
+  footer p { margin: 6px 0; }
+
+  @media (max-width: 720px) {
+    header { padding-top: 28px; }
+    .glyph { font-size: 48px; }
+    .steps { grid-template-columns: 1fr; gap: 8px; margin-top: 20px; }
+    .steps li { padding: 10px 14px; font-size: 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="masthead">
+    <div class="glyph" aria-hidden="true">𓃣</div>
+    <div>
+      <h1>FLASH <span>STATION</span></h1>
+      <p class="sub">Anubis Darkwatch firmware, flashed straight from your browser. No Arduino IDE, no drivers, no tears.</p>
+      <p class="sub tag">the watcher in the static</p>
+    </div>
+  </div>
+
+  <ol class="steps">
+    <li class="hud"><b>01 · PLUG IN</b>Connect the board over USB with a data cable (not a charge-only one).</li>
+    <li class="hud"><b>02 · PICK YOUR BOARD</b>Find the card for your exact board. Several share a chip, so the card is what tells them apart.</li>
+    <li class="hud"><b>03 · INSTALL</b>Click INSTALL, choose the board's port, and wait for it to finish.</li>
+  </ol>
+
+  <div class="warn" id="browser-warn" role="alert">
+    <b>This browser can't talk to USB serial.</b> Open this page in Chrome or Edge on a desktop or laptop.
+    iPhone and iPad browsers can't flash boards.
+  </div>
+  <div class="warn" id="https-warn" role="alert">
+    <b>Flashing needs a secure page.</b> Open this site over https:// (or localhost).
+  </div>
+
+  <nav class="filters" aria-label="Filter by project" id="filters"></nav>
+</header>
+
+<main class="wrap" id="projects" aria-live="polite">
+  <p class="meta">Loading firmware list…</p>
+</main>
+
+<footer class="wrap">
+  <div class="row">
+    <div>
+      <p>All firmware is open source (MIT). Source, wiring notes and screenshots live in each project's repo.</p>
+      <p>Picked the wrong card? No harm done: the chip's own bootloader is always there, so just install the right one.</p>
+      <p>If <b style="color:var(--text);font-weight:normal">Connect</b> fails, open the card's "Won't connect?" tip to put the board in download mode.</p>
+    </div>
+    <div>
+      <p><a href="https://github.com/anubisdarkwatch">github.com/anubisdarkwatch</a></p>
+      <p><a href="https://anubisdarkwatch.com">anubisdarkwatch.com</a></p>
+      <p>Installer: <a href="https://esphome.github.io/esp-web-tools/">ESP Web Tools</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const hasSerial = "serial" in navigator;
+  if (!hasSerial) document.getElementById("browser-warn").classList.add("show");
+  if (!window.isSecureContext) document.getElementById("https-warn").classList.add("show");
+
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const kb = (n) => (n >= 1048576 ? (n / 1048576).toFixed(1) + " MB" : Math.round(n / 1024) + " KB");
+
+  function card(b, fw, repo) {
+    const shot = b.image
+      ? `<img src="${esc(b.image)}" alt="${esc(b.title)} running on the ${esc(b.board)}" loading="lazy" width="720" height="450">`
+      : "";
+    const meta = fw
+      ? `v${esc(fw.version)} · ${kb(fw.bytes)} · updated ${esc(fw.updated)}`
+      : `<span class="missing">No firmware file found yet.</span>`;
+    const action = fw
+      ? `<esp-web-install-button manifest="manifests/${esc(b.id)}.json">
+           <button class="install" slot="activate">INSTALL</button>
+           <span class="unsup" slot="unsupported">Needs Chrome or Edge on desktop.</span>
+           <span class="unsup" slot="not-allowed">Needs an https:// page.</span>
+         </esp-web-install-button>
+         <a class="dl" href="firmware/${esc(fw.file)}" download>.bin</a>`
+      : "";
+    return `<article class="card">
+      <div class="shot">${shot}<div class="chips"><span class="chip">${esc(b.role.toUpperCase())}</span><span class="chip soc">${esc(b.chip)}</span></div></div>
+      <div class="body">
+        <h3>${esc(b.title)}</h3>
+        <div class="board">${esc(b.board)}</div>
+        <p class="desc">${esc(b.desc)}</p>
+        <div class="meta">${meta}</div>
+        <details><summary>Won't connect? / What gets erased</summary>
+          <p><b>Download mode:</b> ${esc(b.boot)}</p>
+          <p><b>"Erase device" wipes:</b> ${esc(b.erases)}</p>
+          <p><a href="https://github.com/${esc(repo)}#readme">Setup &amp; controls on GitHub</a></p>
+        </details>
+        <div class="actions">${action}</div>
+      </div>
+    </article>`;
+  }
+
+  function render(cfg, fwAll, filter) {
+    const main = document.getElementById("projects");
+    main.innerHTML = cfg.projects
+      .filter((p) => filter === "all" || p.id === filter)
+      .map((p) => {
+        const boards = cfg.boards.filter((b) => b.project === p.id);
+        return `<section class="project" id="${esc(p.id)}">
+          <div class="phead"><h2>${esc(p.title)}</h2>
+            <a href="https://github.com/${esc(p.repo)}">${esc(p.repo)} ↗</a>
+            <p class="pblurb">${esc(p.blurb)}</p></div>
+          <div class="grid">${boards.map((b) => card(b, fwAll[b.id], p.repo)).join("")}</div>
+        </section>`;
+      }).join("");
+  }
+
+  function filters(cfg, fwAll) {
+    const nav = document.getElementById("filters");
+    const opts = [{ id: "all", title: "All" }].concat(cfg.projects);
+    let current = "all";
+    try { const saved = localStorage.getItem("flash-filter"); if (opts.some((o) => o.id === saved)) current = saved; } catch (e) {}
+    nav.innerHTML = opts.map((o) => `<button type="button" data-id="${esc(o.id)}" aria-pressed="${o.id === current}">${esc(o.title)}</button>`).join("");
+    nav.addEventListener("click", (e) => {
+      const btn = e.target.closest("button"); if (!btn) return;
+      current = btn.dataset.id;
+      nav.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.id === current));
+      try { localStorage.setItem("flash-filter", current); } catch (e) {}
+      render(cfg, fwAll, current);
+    });
+    render(cfg, fwAll, current);
+  }
+
+  Promise.all([
+    fetch("boards.json", { cache: "no-cache" }).then((r) => r.json()),
+    fetch("firmware.json", { cache: "no-cache" }).then((r) => r.json()).catch(() => ({ boards: {} })),
+  ]).then(([cfg, fw]) => filters(cfg, fw.boards || {}))
+    .catch(() => {
+      document.getElementById("projects").innerHTML =
+        '<p class="missing">Couldn\'t load the firmware list. Refresh the page, or grab the .bin files from GitHub.</p>';
+    });
+})();
+</script>
+</body>
+</html>

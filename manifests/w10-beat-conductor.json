@@ -1,0 +1,17 @@
+{
+  "name": "Beat Conductor (Meshnology W10)",
+  "version": "1.0",
+  "new_install_prompt_erase": true,
+  "new_install_improv_wait_time": 0,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "../firmware/W10-Beat-Conductor-v1.0.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}

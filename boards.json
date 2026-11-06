@@ -1,0 +1,157 @@
+{
+  "projects": [
+    {
+      "id": "beat",
+      "title": "W10 Beat Conductor",
+      "blurb": "One mic hears the beat, every board flashes on it. Over LoRa, no Wi-Fi.",
+      "repo": "anubisdarkwatch/W10-Beat-Conductor"
+    },
+    {
+      "id": "tscan",
+      "title": "T-Scan",
+      "blurb": "Pocket Wi-Fi and BLE scanner. Passive: it only listens.",
+      "repo": "anubisdarkwatch/T-Scan"
+    },
+    {
+      "id": "waterfall",
+      "title": "W10 ISM Waterfall",
+      "blurb": "A live 902-928 MHz waterfall on the W10's own screen.",
+      "repo": "anubisdarkwatch/W10-ISM-Waterfall"
+    }
+  ],
+  "boards": [
+    {
+      "id": "w10-beat-conductor",
+      "project": "beat",
+      "title": "Beat Conductor",
+      "board": "Meshnology W10",
+      "chip": "ESP32-S3",
+      "role": "Conductor",
+      "desc": "Hears the kick through its mic, finds the tempo and the downbeat, and broadcasts every beat on LoRa.",
+      "prefix": "W10-Beat-Conductor",
+      "image": "img/w10-conductor.jpg",
+      "erases": "Nothing: this firmware saves no settings.",
+      "boot": "Hold BOOT while plugging in."
+    },
+    {
+      "id": "beat-follower-heltec-v3",
+      "project": "beat",
+      "title": "Beat Follower",
+      "board": "Heltec WiFi LoRa 32 V3",
+      "chip": "ESP32-S3",
+      "role": "Follower",
+      "desc": "Flashes in the conductor's colour on every beat, and keeps time on its own if a packet goes missing.",
+      "prefix": "Beat-Follower-HeltecV3",
+      "image": "img/heltec-follower.jpg",
+      "erases": "Nothing: this firmware saves no settings.",
+      "boot": "Hold PRG while plugging in."
+    },
+    {
+      "id": "beat-bridge-heltec-v3",
+      "project": "beat",
+      "title": "Beat Bridge",
+      "board": "Heltec WiFi LoRa 32 V3",
+      "chip": "ESP32-S3",
+      "role": "Bridge",
+      "desc": "Links the LoRa beat to the booth gear over ESP-NOW. Needs no screen, so a V3 with a dead OLED is perfect.",
+      "prefix": "Beat-Bridge-HeltecV3",
+      "image": "img/beat-bridge.jpg",
+      "erases": "Nothing: this firmware saves no settings.",
+      "boot": "Hold PRG while plugging in."
+    },
+    {
+      "id": "cyd-beat-console",
+      "project": "beat",
+      "title": "Booth Console",
+      "board": "CYD (ESP32-2432S028R)",
+      "chip": "ESP32",
+      "role": "Console",
+      "desc": "Touchscreen BPM, beat flashes and link stats. TAKE grabs the beat from the W10 mid-set without a skip.",
+      "prefix": "CYD-Beat-Console",
+      "image": "img/cyd-console.jpg",
+      "erases": "Display setting and touch calibration (you redo them on first boot).",
+      "boot": "Hold BOOT while plugging in."
+    },
+    {
+      "id": "m5dial-beat-dial",
+      "project": "beat",
+      "title": "Beat Dial",
+      "board": "M5Stack M5Dial",
+      "chip": "ESP32-S3",
+      "role": "Controller",
+      "desc": "Round handheld controller. Spin for tempo, press and spin to nudge, tap an enrolled tag or implant to take the beat.",
+      "prefix": "M5Dial-Beat-Dial",
+      "image": "img/m5dial.jpg",
+      "erases": "Enrolled tags / implants and the lock setting.",
+      "boot": "Usually connects without buttons."
+    },
+    {
+      "id": "sticks3-pocket-conductor",
+      "project": "beat",
+      "title": "Pocket Conductor",
+      "board": "M5Stack StickS3",
+      "chip": "ESP32-S3",
+      "role": "Conductor",
+      "desc": "The W10's beat engine on the StickS3's mic. Go ON AIR to lead the whole rig, or switch to FOLLOW and wear the beat.",
+      "prefix": "StickS3-Pocket-Conductor",
+      "image": "img/sticks3.jpg",
+      "erases": "Mic gain and mode.",
+      "boot": "Usually connects; if not, unplug and retry right after plugging in."
+    },
+    {
+      "id": "tscan-tdisplay",
+      "project": "tscan",
+      "title": "T-Scan",
+      "board": "LilyGo TTGO T-Display",
+      "chip": "ESP32",
+      "role": "Scanner",
+      "desc": "Wi-Fi and BLE scanner on the 1.14\" screen. Lists what's around you; never transmits.",
+      "prefix": "T-Scan",
+      "suffix": "tdisplay",
+      "image": "img/tscan-tdisplay.jpg",
+      "erases": "Screen rotation.",
+      "boot": "Hold the left front button, tap reset on the top edge, release."
+    },
+    {
+      "id": "tscan-tembed-cc1101",
+      "project": "tscan",
+      "title": "T-Scan",
+      "board": "LilyGo T-Embed CC1101",
+      "chip": "ESP32-S3",
+      "role": "Scanner",
+      "desc": "The scanner on the T-Embed's 1.9\" screen, driven by the knob.",
+      "prefix": "T-Scan",
+      "suffix": "tembed-cc1101",
+      "image": "img/tscan-tembed.jpg",
+      "erases": "Screen rotation.",
+      "boot": "Hold the knob down while plugging in, release."
+    },
+    {
+      "id": "tscan-tdongle-s3",
+      "project": "tscan",
+      "title": "T-Scan",
+      "board": "LilyGo T-Dongle S3",
+      "chip": "ESP32-S3",
+      "role": "Scanner",
+      "desc": "The scanner shrunk onto a USB stick's 0.96\" screen.",
+      "prefix": "T-Scan",
+      "suffix": "tdongle-s3",
+      "image": "img/tscan-tdongle.jpg",
+      "erases": "Screen rotation.",
+      "boot": "Hold BOOT while plugging in, release."
+    },
+    {
+      "id": "w10-ism-waterfall",
+      "project": "waterfall",
+      "title": "ISM Waterfall",
+      "board": "Meshnology W10",
+      "chip": "ESP32-S3",
+      "role": "Spectrum",
+      "desc": "Watch LoRa, Meshtastic and LoRaWAN traffic scroll by across the US ISM band.",
+      "prefix": "W10-ISM-Waterfall",
+      "image": "img/w10-waterfall.jpg",
+      "erases": "Nothing: this firmware saves no settings.",
+      "boot": "Hold BOOT while plugging in."
+    }
+  ]
+}

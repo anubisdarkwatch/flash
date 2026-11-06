@@ -1,0 +1,17 @@
+{
+  "name": "T-Scan (LilyGo T-Embed CC1101)",
+  "version": "1.3",
+  "new_install_prompt_erase": true,
+  "new_install_improv_wait_time": 0,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "../firmware/T-Scan-v1.3-tembed-cc1101.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
