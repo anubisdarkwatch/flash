@@ -43,10 +43,10 @@
       "updated": "2026-11-06"
     },
     "tab5-beat-command": {
-      "file": "Tab5-Beat-Command-v1.0.1.bin",
-      "version": "1.0.1",
+      "file": "Tab5-Beat-Command-v1.0.2.bin",
+      "version": "1.0.2",
       "bytes": 1130496,
-      "sha256": "647131760005bfccfda046cee6d7018d33d20229b594ee4f5efa60d3ad8cab05",
+      "sha256": "3185013f3d964a059f4d76465c1c4ee9324a0efd3391f7651a1bd7a3a5235d5f",
       "updated": "2026-11-06"
     },
     "xiao-beat-gateway": {
