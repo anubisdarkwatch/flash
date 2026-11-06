@@ -122,7 +122,7 @@
       "prefix": "Beat-Gateway-XIAO-S3",
       "image": "img/beat-gateway.jpg",
       "erases": "MIDI note / transport / channel settings.",
-      "boot": "A new XIAO connects as is. Re-flashing: hold B, tap R, let go of B, then INSTALL."
+      "boot": "Re-flashing: unplug, hold B (tiny button by the USB port), plug in, let go, INSTALL, pick \"USB JTAG/serial debug unit\". It can sit at 100% when done: unplug and replug."
     },
     {
       "id": "tscan-tdisplay",

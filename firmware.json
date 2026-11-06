@@ -43,17 +43,17 @@
       "updated": "2026-11-06"
     },
     "tab5-beat-command": {
-      "file": "Tab5-Beat-Command-v1.0.bin",
-      "version": "1.0",
+      "file": "Tab5-Beat-Command-v1.0.1.bin",
+      "version": "1.0.1",
       "bytes": 1130496,
-      "sha256": "489d238a190631f16484e7c275c9957f81909ccc68ab15de4fb61966d69af5a5",
+      "sha256": "647131760005bfccfda046cee6d7018d33d20229b594ee4f5efa60d3ad8cab05",
       "updated": "2026-11-06"
     },
     "xiao-beat-gateway": {
-      "file": "Beat-Gateway-XIAO-S3-v1.1.bin",
-      "version": "1.1",
+      "file": "Beat-Gateway-XIAO-S3-v1.2.bin",
+      "version": "1.2",
       "bytes": 962560,
-      "sha256": "7eccf76bc79a789bd2a3b891bbaf9363e8259bb2e16ef257367ec5dc867a721f",
+      "sha256": "fac4e06d1db9202082903fa1b110070adcbdc230b678ae65dcbbaa6dbcd8f23b",
       "updated": "2026-11-06"
     },
     "tscan-tdisplay": {
