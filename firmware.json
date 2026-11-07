@@ -57,10 +57,10 @@
       "updated": "2026-11-07"
     },
     "piglet-beat-badge": {
-      "file": "Piglet-Beat-Badge-C5-v1.0.bin",
-      "version": "1.0",
+      "file": "Piglet-Beat-Badge-C5-v1.0.1.bin",
+      "version": "1.0.1",
       "bytes": 1163264,
-      "sha256": "5d0cd5117c3f6f5629011a4ce497d600a535c03613cd093f74a55dff68769c8c",
+      "sha256": "c219a96ce620310dd2e5b46a9ebc892f6932c81ba2d68841090f11b623d7e6d9",
       "updated": "2026-11-07"
     },
     "xiao-beat-gateway": {
