@@ -112,6 +112,19 @@
       "boot": "Hold reset about 2 s until the green LED blinks fast, then INSTALL."
     },
     {
+      "id": "cardputer-beat-terminal",
+      "project": "beat",
+      "title": "Beat Commander Terminal",
+      "board": "M5Stack Cardputer ADV",
+      "chip": "ESP32-S3",
+      "role": "Controller",
+      "desc": "A keyboard booth controller: follows the beat, then type a BPM and hit ENTER, tap SPACE, or nudge with [ ] to take command. ESP-NOW, works with the Heltec bridge. Original Cardputer works too.",
+      "prefix": "Cardputer-Beat-Terminal",
+      "image": "img/cardputer-terminal.jpg",
+      "erases": "Nothing saved yet.",
+      "boot": "If it won't connect: hold G0, plug in USB, let go, then INSTALL."
+    },
+    {
       "id": "xiao-beat-gateway",
       "project": "beat",
       "title": "Beat Gateway",
