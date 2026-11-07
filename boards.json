@@ -125,6 +125,19 @@
       "boot": "If it won't connect: hold G0, plug in USB, let go, then INSTALL."
     },
     {
+      "id": "piglet-beat-badge",
+      "project": "beat",
+      "title": "Beat Badge",
+      "board": "Piglet (XIAO ESP32-C5)",
+      "chip": "ESP32-C5",
+      "role": "Follower",
+      "desc": "Turns a Piglet wardriver into a pocket beat badge: big BPM, flashes on the beat, and a signal page for walking the venue. Hold the button 2 s to take command. Replaces the Piglet firmware.",
+      "prefix": "Piglet-Beat-Badge-C5",
+      "image": "img/piglet-badge.jpg",
+      "erases": "The Piglet wardriver firmware (SD card is untouched; reflash Piglet to go back).",
+      "boot": "If it won't connect: hold the button while plugging in USB, then INSTALL."
+    },
+    {
       "id": "xiao-beat-gateway",
       "project": "beat",
       "title": "Beat Gateway",
