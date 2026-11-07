@@ -4,7 +4,7 @@
       "id": "beat",
       "title": "Beat Commander",
       "blurb": "One beat, every light in the room. A conductor sets the tempo, every board flashes on it, and booth controllers can take command. LoRa + ESP-NOW, no Wi-Fi.",
-      "repo": "anubisdarkwatch/W10-Beat-Conductor"
+      "repo": "anubisdarkwatch/Beat-Commander"
     },
     {
       "id": "tscan",

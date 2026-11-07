@@ -4,7 +4,7 @@
 Usage: python3 tools/sync.py <folder holding the checked-out source repos>
 
 The source folder must contain one checkout per project repo, named after the repo
-(W10-Beat-Conductor/, T-Scan/, W10-ISM-Waterfall/). For each board in boards.json the newest
+(Beat-Commander/, T-Scan/, W10-ISM-Waterfall/). For each board in boards.json the newest
 firmware/<prefix>-v<version>[-<suffix>].bin is copied to firmware/, and manifests/<board id>.json
 plus firmware.json (what the page shows) are regenerated. Old .bins that no board uses are removed.
 """
