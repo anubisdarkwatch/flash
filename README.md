@@ -23,7 +23,7 @@ python3 -m http.server 8000        # then open http://localhost:8000 (localhost 
 ```
 
 ## Custom domain
-Add a `CNAME` file containing the domain (e.g. `flash.beatconductor.com`) and point a CNAME DNS record at
+Add a `CNAME` file containing the domain (e.g. `flash.beatcommander.com`) and point a CNAME DNS record at
 `anubisdarkwatch.github.io`. Then tick **Enforce HTTPS** under Settings → Pages.
 
 MIT license.

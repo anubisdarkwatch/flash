@@ -2,8 +2,8 @@
   "projects": [
     {
       "id": "beat",
-      "title": "W10 Beat Conductor",
-      "blurb": "One mic hears the beat, every board flashes on it. Over LoRa, no Wi-Fi.",
+      "title": "Beat Commander",
+      "blurb": "One beat, every light in the room. A conductor sets the tempo, every board flashes on it, and booth controllers can take command. LoRa + ESP-NOW, no Wi-Fi.",
       "repo": "anubisdarkwatch/W10-Beat-Conductor"
     },
     {
@@ -23,7 +23,7 @@
     {
       "id": "w10-beat-conductor",
       "project": "beat",
-      "title": "Beat Conductor",
+      "title": "W10 Conductor",
       "board": "Meshnology W10",
       "chip": "ESP32-S3",
       "role": "Conductor",
