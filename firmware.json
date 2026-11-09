@@ -22,11 +22,11 @@
       "updated": "2026-11-06"
     },
     "cyd-beat-console": {
-      "file": "CYD-Beat-Console-v1.0.2.bin",
-      "version": "1.0.2",
-      "bytes": 1048576,
-      "sha256": "efff6095c4ad97f63c8d282919c21bf376c4c222f706b9bc087115c2723e0269",
-      "updated": "2026-11-06"
+      "file": "CYD-Beat-Console-v1.0.4.bin",
+      "version": "1.0.4",
+      "bytes": 1044480,
+      "sha256": "eed8671235c72366895399db64af26c710af24bcce7a395ca2fa62b0a577efcf",
+      "updated": "2026-11-09"
     },
     "m5dial-beat-dial": {
       "file": "M5Dial-Beat-Dial-v1.0.bin",

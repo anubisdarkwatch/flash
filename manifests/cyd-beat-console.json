@@ -1,6 +1,6 @@
 {
   "name": "Booth Console (CYD (ESP32-2432S028R))",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "new_install_prompt_erase": true,
   "new_install_improv_wait_time": 0,
   "builds": [
@@ -8,7 +8,7 @@
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "../firmware/CYD-Beat-Console-v1.0.2.bin",
+          "path": "../firmware/CYD-Beat-Console-v1.0.4.bin",
           "offset": 0
         }
       ]
