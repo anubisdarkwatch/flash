@@ -125,6 +125,19 @@
       "boot": "If it won't connect: hold G0, plug in USB, let go, then INSTALL."
     },
     {
+      "id": "tdeck-beat-deck",
+      "project": "beat",
+      "title": "Beat Deck",
+      "board": "LilyGo T-Deck Plus (915 MHz)",
+      "chip": "ESP32-S3",
+      "role": "Controller",
+      "desc": "A keyboard booth controller with its own LoRa radio: hears the conductor directly, takes command with the trackball, tap or a typed BPM and transmits on LoRa itself. Full-screen visuals page, optional bridge role. Plain T-Deck works too.",
+      "prefix": "TDeck-Beat-Deck",
+      "image": "img/tdeck-deck.jpg",
+      "erases": "The current T-Deck firmware (Meshtastic etc.; reflash it to go back).",
+      "boot": "If it won't connect: switch it off, hold the trackball pressed in, switch on with USB plugged in, let go, then INSTALL."
+    },
+    {
       "id": "piglet-beat-badge",
       "project": "beat",
       "title": "Beat Badge",
