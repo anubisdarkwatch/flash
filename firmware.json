@@ -105,6 +105,20 @@
       "sha256": "d22f4ac9040402e4b0fc3f0a0abc1c25859671bc7a82c1030e97d05ec6abcec5",
       "updated": "2026-11-06"
     },
+    "tdongle-beat-gateway": {
+      "file": "TDongle-Beat-Gateway-v1.0.bin",
+      "version": "1.0",
+      "bytes": 1159168,
+      "sha256": "0ffae63d909352bb487675ec6795c971d64fc3cdde030946e5da36f15785d1e0",
+      "updated": "2026-11-09"
+    },
+    "tdongle-beat-light": {
+      "file": "TDongle-Beat-Light-C5-v1.0.bin",
+      "version": "1.0",
+      "bytes": 1249280,
+      "sha256": "3a0b36032af6b702ecf44e618d97d489c9721b9b259a8928bef4ffb1b3a72ab8",
+      "updated": "2026-11-09"
+    },
     "tscan-tdisplay": {
       "file": "T-Scan-v1.3-tdisplay.bin",
       "version": "1.3",

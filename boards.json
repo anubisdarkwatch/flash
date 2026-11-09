@@ -220,6 +220,32 @@
       "boot": "Re-flashing: unplug, hold B (tiny button by the USB port), plug in, let go, INSTALL, pick \"USB JTAG/serial debug unit\". It can sit at 100% when done: unplug and replug."
     },
     {
+      "id": "tdongle-beat-gateway",
+      "project": "beat",
+      "title": "Beat Gateway Dongle",
+      "board": "LilyGo T-Dongle S3",
+      "chip": "ESP32-S3",
+      "role": "Gateway",
+      "desc": "The Beat Gateway on a USB stick with a screen: MIDI clock for DJ software, the feed for Beat Hub (Ableton Link, OSC) and the Tab5's radio. The screen shows BPM, source and MIDI clock, plus five visuals; the LED flashes in the conductor's colour.",
+      "prefix": "TDongle-Beat-Gateway",
+      "image": "img/tdongle-gateway.jpg",
+      "erases": "The dongle's current firmware (T-Scan etc.; reflash it from its card to go back).",
+      "boot": "If it won't connect: hold the dongle's button while plugging it in, let go, then INSTALL."
+    },
+    {
+      "id": "tdongle-beat-light",
+      "project": "beat",
+      "title": "Beat Light",
+      "board": "LilyGo T-Dongle C5",
+      "chip": "ESP32-C5",
+      "role": "Follower",
+      "desc": "A USB beat light: plug it into any charger or power bank and the screen and LED pulse on every beat in the conductor's colour. Also feeds Beat Hub (Link + OSC, no MIDI). BEAT, STATS and five visual pages.",
+      "prefix": "TDongle-Beat-Light-C5",
+      "image": "img/tdongle-light.jpg",
+      "erases": "The dongle's current firmware.",
+      "boot": "If it won't connect: hold the dongle's button while plugging it in, let go, then INSTALL."
+    },
+    {
       "id": "tscan-tdisplay",
       "project": "tscan",
       "title": "T-Scan",

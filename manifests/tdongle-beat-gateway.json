@@ -1,0 +1,17 @@
+{
+  "name": "Beat Gateway Dongle (LilyGo T-Dongle S3)",
+  "version": "1.0",
+  "new_install_prompt_erase": true,
+  "new_install_improv_wait_time": 0,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "../firmware/TDongle-Beat-Gateway-v1.0.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
