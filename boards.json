@@ -172,7 +172,7 @@
       "board": "CYD 3.2\" IPS (ESP32-2432S032C)",
       "chip": "ESP32",
       "role": "Visualizer",
-      "desc": "The six beat visuals on the 3.2\" IPS screen with capacitive touch: deepest blacks of the bunch. Tap to change mode; hold BOOT if colours look off.",
+      "desc": "The six beat visuals on the 3.2\" IPS screen with capacitive touch: deepest blacks of the bunch. Tap = next mode, hold 1.5 s = AUTO, hold 4 s if colours or orientation look off.",
       "prefix": "Beat-Visualizer",
       "suffix": "cyd32",
       "image": "img/beat-visualizer-cyd32.jpg",
