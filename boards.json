@@ -193,6 +193,20 @@
       "boot": "If it won't connect: hold BOOT, tap RST, release BOOT."
     },
     {
+      "id": "beat-visualizer-phantom",
+      "project": "beat",
+      "title": "Beat Visualizer",
+      "board": "Rabbit-Labs Phantom (2.4\")",
+      "chip": "ESP32",
+      "role": "Visualizer",
+      "desc": "Beat-synced visuals in your hand: PULSE, TUNNEL, BARS, WARP, PLASMA and BPM, in the conductor's colour. Tap (finger or stylus) = next mode, hold 1.5 s = AUTO, 10 s = off. Resistive and capacitive Phantoms both work.",
+      "prefix": "Beat-Visualizer",
+      "suffix": "phantom",
+      "image": "img/beat-visualizer-phantom.jpg",
+      "erases": "The Phantom's current firmware (GhostESP / SquachWatch; reflash to go back).",
+      "boot": "If it won't connect: hold BOOT while plugging in USB (or press RST while holding BOOT), then INSTALL."
+    },
+    {
       "id": "xiao-beat-gateway",
       "project": "beat",
       "title": "Beat Gateway",

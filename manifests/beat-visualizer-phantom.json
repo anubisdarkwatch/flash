@@ -1,0 +1,17 @@
+{
+  "name": "Beat Visualizer (Rabbit-Labs Phantom (2.4\"))",
+  "version": "1.3",
+  "new_install_prompt_erase": true,
+  "new_install_improv_wait_time": 0,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "../firmware/Beat-Visualizer-v1.3-phantom.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
