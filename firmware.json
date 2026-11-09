@@ -1,11 +1,11 @@
 {
   "boards": {
     "w10-beat-conductor": {
-      "file": "W10-Beat-Conductor-v1.0.bin",
-      "version": "1.0",
-      "bytes": 458752,
-      "sha256": "7d5dd11b9810cb2836ff2c9a4f4e728ef379a9f1fe6b8350b11563b114a5f1f2",
-      "updated": "2026-11-06"
+      "file": "W10-Beat-Conductor-v1.1.bin",
+      "version": "1.1",
+      "bytes": 1011712,
+      "sha256": "bb228ac82a98c30f2182745c7eed611099fcf63a1809ab89adcbe46b5dd667d4",
+      "updated": "2026-11-09"
     },
     "beat-follower-heltec-v3": {
       "file": "Beat-Follower-HeltecV3-v1.1.bin",

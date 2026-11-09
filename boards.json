@@ -27,7 +27,7 @@
       "board": "Meshnology W10",
       "chip": "ESP32-S3",
       "role": "Conductor",
-      "desc": "Hears the kick through its mic, finds the tempo and the downbeat, and broadcasts every beat on LoRa.",
+      "desc": "Hears the kick through its mic, finds the tempo and the downbeat, and broadcasts every beat on LoRa. v1.1: also relays a StickS3 (or any booth controller) at the speaker onto LoRa, with no Heltec bridge needed, and takes over from its own mic if the StickS3 goes quiet.",
       "prefix": "W10-Beat-Conductor",
       "image": "img/w10-conductor.jpg",
       "erases": "Nothing: this firmware saves no settings.",
