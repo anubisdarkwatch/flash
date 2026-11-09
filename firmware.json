@@ -57,10 +57,10 @@
       "updated": "2026-11-07"
     },
     "tdeck-beat-deck": {
-      "file": "TDeck-Beat-Deck-v1.0.bin",
-      "version": "1.0",
-      "bytes": 1196032,
-      "sha256": "6dd3217cd09d7c12ed6d119fb7c62c8480f454448d8de0f4a53d1bf1534fcc63",
+      "file": "TDeck-Beat-Deck-v1.1.bin",
+      "version": "1.1",
+      "bytes": 1224704,
+      "sha256": "109b05bb821904c352e53f6a27bd56de03f98b9b9035633d8b1ed6e1992244ee",
       "updated": "2026-11-09"
     },
     "piglet-beat-badge": {
