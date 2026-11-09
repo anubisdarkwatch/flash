@@ -1,6 +1,6 @@
 {
   "name": "Beat Visualizer (CYD (ESP32-2432S028R))",
-  "version": "1.0",
+  "version": "1.1",
   "new_install_prompt_erase": true,
   "new_install_improv_wait_time": 0,
   "builds": [
@@ -8,7 +8,7 @@
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "../firmware/Beat-Visualizer-v1.0-cyd.bin",
+          "path": "../firmware/Beat-Visualizer-v1.1-cyd.bin",
           "offset": 0
         }
       ]
