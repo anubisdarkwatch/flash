@@ -204,7 +204,7 @@
       "suffix": "phantom",
       "image": "img/beat-visualizer-phantom.jpg",
       "erases": "The Phantom's current firmware (GhostESP / SquachWatch; reflash to go back).",
-      "boot": "If it won't connect: hold BOOT while plugging in USB (or press RST while holding BOOT), then INSTALL."
+      "boot": "Usually connects on its own over USB. If not: hold BOOT, tap RST, let go of BOOT (the buttons may be under the case)."
     },
     {
       "id": "xiao-beat-gateway",
