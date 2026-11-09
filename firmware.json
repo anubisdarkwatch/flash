@@ -64,24 +64,24 @@
       "updated": "2026-11-07"
     },
     "beat-visualizer-ttgo": {
-      "file": "Beat-Visualizer-v1.1.2-ttgo.bin",
-      "version": "1.1.2",
+      "file": "Beat-Visualizer-v1.2-ttgo.bin",
+      "version": "1.2",
       "bytes": 1130496,
-      "sha256": "0f59e516d200f2819ad3fbdac9be4c45be36158390840c24ef8f52636d528bf3",
+      "sha256": "e593f20244f17c0e4ffd486d977975c11ee25128492ef99ef38e15a1728aa817",
       "updated": "2026-11-09"
     },
     "beat-visualizer-cyd": {
-      "file": "Beat-Visualizer-v1.1.2-cyd.bin",
-      "version": "1.1.2",
-      "bytes": 1130496,
-      "sha256": "905d92f61b114cb6eec401b8381e8cfdae9ad0e87336cf250792d27ba9e10a2f",
+      "file": "Beat-Visualizer-v1.2-cyd.bin",
+      "version": "1.2",
+      "bytes": 1138688,
+      "sha256": "b5d78644dff7a4d9cf592b8c0cbaa8c9a067d4a98f4e9f7e744d75399da3dc15",
       "updated": "2026-11-09"
     },
     "beat-visualizer-cyd32": {
-      "file": "Beat-Visualizer-v1.1.2-cyd32.bin",
-      "version": "1.1.2",
-      "bytes": 1130496,
-      "sha256": "9278434f73c5e226730631a870a2b6c23dda1ba15c9aea1e8772a41a8c61a0bf",
+      "file": "Beat-Visualizer-v1.2-cyd32.bin",
+      "version": "1.2",
+      "bytes": 1138688,
+      "sha256": "c0f0f41565091ab2f32a66174886160d2cb9771f7a249d67c3a22bc013cc462f",
       "updated": "2026-11-09"
     },
     "xiao-beat-gateway": {

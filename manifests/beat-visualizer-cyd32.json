@@ -1,6 +1,6 @@
 {
   "name": "Beat Visualizer (CYD 3.2\" IPS (ESP32-2432S032C))",
-  "version": "1.1.2",
+  "version": "1.2",
   "new_install_prompt_erase": true,
   "new_install_improv_wait_time": 0,
   "builds": [
@@ -8,7 +8,7 @@
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "../firmware/Beat-Visualizer-v1.1.2-cyd32.bin",
+          "path": "../firmware/Beat-Visualizer-v1.2-cyd32.bin",
           "offset": 0
         }
       ]
