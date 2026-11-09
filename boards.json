@@ -40,10 +40,10 @@
       "board": "Heltec WiFi LoRa 32 V3",
       "chip": "ESP32-S3",
       "role": "Follower",
-      "desc": "Flashes in the conductor's colour on every beat, and keeps time on its own if a packet goes missing.",
+      "desc": "Flashes on every beat and keeps time on its own if a packet goes missing. The OLED is a beat screen: big BPM, plus PULSE, BARS, TUNNEL, WARP and SCOPE visuals and a signal page. PRG = next page, hold = auto.",
       "prefix": "Beat-Follower-HeltecV3",
       "image": "img/heltec-follower.jpg",
-      "erases": "Nothing: this firmware saves no settings.",
+      "erases": "Nothing important: it only saves the screen page.",
       "boot": "Hold PRG while plugging in."
     },
     {
@@ -53,10 +53,10 @@
       "board": "Heltec WiFi LoRa 32 V3",
       "chip": "ESP32-S3",
       "role": "Bridge",
-      "desc": "Links the LoRa beat to the booth gear over ESP-NOW. Needs no screen, so a V3 with a dead OLED is perfect.",
+      "desc": "Links the LoRa beat to the booth gear over ESP-NOW. Works with a dead OLED; with a working one it's a beat screen too (visuals + bridge stats, PRG = next page).",
       "prefix": "Beat-Bridge-HeltecV3",
       "image": "img/beat-bridge.jpg",
-      "erases": "Nothing: this firmware saves no settings.",
+      "erases": "Nothing important: it only saves the screen page.",
       "boot": "Hold PRG while plugging in."
     },
     {

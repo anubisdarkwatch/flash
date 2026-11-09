@@ -1,6 +1,6 @@
 {
   "name": "Beat Bridge (Heltec WiFi LoRa 32 V3)",
-  "version": "1.0",
+  "version": "1.1",
   "new_install_prompt_erase": true,
   "new_install_improv_wait_time": 0,
   "builds": [
@@ -8,7 +8,7 @@
       "chipFamily": "ESP32-S3",
       "parts": [
         {
-          "path": "../firmware/Beat-Bridge-HeltecV3-v1.0.bin",
+          "path": "../firmware/Beat-Bridge-HeltecV3-v1.1.bin",
           "offset": 0
         }
       ]

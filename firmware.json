@@ -8,18 +8,18 @@
       "updated": "2026-11-06"
     },
     "beat-follower-heltec-v3": {
-      "file": "Beat-Follower-HeltecV3-v1.0.bin",
-      "version": "1.0",
-      "bytes": 430080,
-      "sha256": "eb4f035e0753fb71dcde63b1df18efa51cd9e87f19500a5351e25fda31efadae",
-      "updated": "2026-11-06"
+      "file": "Beat-Follower-HeltecV3-v1.1.bin",
+      "version": "1.1",
+      "bytes": 512000,
+      "sha256": "8acc8bb268824f29f552f87f46d4b9c9743dcbd8bf5550bbbb52b80c6ffab66b",
+      "updated": "2026-11-09"
     },
     "beat-bridge-heltec-v3": {
-      "file": "Beat-Bridge-HeltecV3-v1.0.bin",
-      "version": "1.0",
-      "bytes": 967920,
-      "sha256": "f92242714a7490df1fca590d23ffe35ab088c2cdd37515a8ab5d99b404fd703f",
-      "updated": "2026-11-06"
+      "file": "Beat-Bridge-HeltecV3-v1.1.bin",
+      "version": "1.1",
+      "bytes": 1052672,
+      "sha256": "e72ea11af2d92db52a8729dde328561c9b1f9b3274a2b51ae79d534023816278",
+      "updated": "2026-11-09"
     },
     "cyd-beat-console": {
       "file": "CYD-Beat-Console-v1.0.5.bin",
