@@ -138,6 +138,34 @@
       "boot": "If it won't connect: hold the button while plugging in USB, then INSTALL."
     },
     {
+      "id": "beat-visualizer-ttgo",
+      "project": "beat",
+      "title": "Beat Visualizer",
+      "board": "LilyGo TTGO T-Display",
+      "chip": "ESP32",
+      "role": "Visualizer",
+      "desc": "Six beat-synced visuals (pulse, tunnel, bars, warp, plasma, BPM) in the conductor's colours. AUTO switches every 8 bars; demo mode with no link.",
+      "prefix": "Beat-Visualizer",
+      "suffix": "ttgo",
+      "image": "img/beat-visualizer-ttgo.jpg",
+      "erases": "Mode, brightness, rotation.",
+      "boot": "Hold the left front button, tap reset on the top edge, release."
+    },
+    {
+      "id": "beat-visualizer-cyd",
+      "project": "beat",
+      "title": "Beat Visualizer",
+      "board": "CYD (ESP32-2432S028R)",
+      "chip": "ESP32",
+      "role": "Visualizer",
+      "desc": "The badge-sized one: the six beat visuals on the 2.8\" screen, plus the RGB LED. Tap to change mode; hold BOOT if colours look off.",
+      "prefix": "Beat-Visualizer",
+      "suffix": "cyd",
+      "image": "img/beat-visualizer.jpg",
+      "erases": "Mode and panel colour setting.",
+      "boot": "If it won't connect: hold BOOT, tap RST, release BOOT."
+    },
+    {
       "id": "xiao-beat-gateway",
       "project": "beat",
       "title": "Beat Gateway",

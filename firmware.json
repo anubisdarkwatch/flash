@@ -63,6 +63,20 @@
       "sha256": "9d5525f28a3524c53480aa600481f315d3f6ea9d34a0d23db2179d7b253ad692",
       "updated": "2026-11-07"
     },
+    "beat-visualizer-ttgo": {
+      "file": "Beat-Visualizer-v1.0-ttgo.bin",
+      "version": "1.0",
+      "bytes": 1110016,
+      "sha256": "6fd3968e479808c93d1a4598344310e31113316aba5a3aa4780d700914c4da72",
+      "updated": "2026-11-09"
+    },
+    "beat-visualizer-cyd": {
+      "file": "Beat-Visualizer-v1.0-cyd.bin",
+      "version": "1.0",
+      "bytes": 1114112,
+      "sha256": "e763268223dc3e6929ae19b71bd76ccf6ad34899d55d7712c7028be37a53d69d",
+      "updated": "2026-11-09"
+    },
     "xiao-beat-gateway": {
       "file": "Beat-Gateway-XIAO-S3-v1.3.bin",
       "version": "1.3",
