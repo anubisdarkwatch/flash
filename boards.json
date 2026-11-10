@@ -246,6 +246,34 @@
       "boot": "If it won't connect: hold the dongle's button while plugging it in, let go, then INSTALL."
     },
     {
+      "project": "beat",
+      "chip": "ESP32-C5",
+      "role": "Lighting",
+      "prefix": "C5-Beat-Strip",
+      "image": "img/c5-beat-strip.jpg",
+      "erases": "The board's current firmware.",
+      "boot": "If it won't connect: hold BOOT, tap RESET, let go of BOOT, then INSTALL.",
+      "id": "c5-beat-strip-devkit",
+      "title": "Beat Strip",
+      "board": "ESP32-C5 DevKit / Waveshare C5",
+      "suffix": "devkit",
+      "desc": "Drives a 5V WS2812B / SK6812 LED strip on the beat in the conductor's colour: pulse, chase, burst, 1-2-3-4 bar, sparkle, rainbow or auto. Strip data on GPIO1. The onboard RGB LED flashes too."
+    },
+    {
+      "project": "beat",
+      "chip": "ESP32-C5",
+      "role": "Lighting",
+      "prefix": "C5-Beat-Strip",
+      "image": "img/c5-beat-strip.jpg",
+      "erases": "The board's current firmware.",
+      "boot": "If it won't connect: hold BOOT, tap RESET, let go of BOOT, then INSTALL.",
+      "id": "c5-beat-strip-xiao",
+      "title": "Beat Strip",
+      "board": "Seeed XIAO ESP32-C5",
+      "suffix": "xiao",
+      "desc": "Drives a 5V WS2812B / SK6812 LED strip on the beat in the conductor's colour: pulse, chase, burst, 1-2-3-4 bar, sparkle, rainbow or auto. Strip data on D0, power from VBUS."
+    },
+    {
       "id": "tscan-tdisplay",
       "project": "tscan",
       "title": "T-Scan",

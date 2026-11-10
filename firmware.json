@@ -119,6 +119,20 @@
       "sha256": "3a0b36032af6b702ecf44e618d97d489c9721b9b259a8928bef4ffb1b3a72ab8",
       "updated": "2026-11-09"
     },
+    "c5-beat-strip-devkit": {
+      "file": "C5-Beat-Strip-v1.0-devkit.bin",
+      "version": "1.0",
+      "bytes": 1101824,
+      "sha256": "1f52f6ec5b339998526393f905db68e6828c2ca7a2ab04d68a1805c7514ab121",
+      "updated": "2026-11-10"
+    },
+    "c5-beat-strip-xiao": {
+      "file": "C5-Beat-Strip-v1.0-xiao.bin",
+      "version": "1.0",
+      "bytes": 1110016,
+      "sha256": "5671363504ad300097395884ef587d621901f794149a3251032d564d680fa02c",
+      "updated": "2026-11-10"
+    },
     "tscan-tdisplay": {
       "file": "T-Scan-v1.3-tdisplay.bin",
       "version": "1.3",

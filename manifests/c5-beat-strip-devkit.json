@@ -1,0 +1,17 @@
+{
+  "name": "Beat Strip (ESP32-C5 DevKit / Waveshare C5)",
+  "version": "1.0",
+  "new_install_prompt_erase": true,
+  "new_install_improv_wait_time": 0,
+  "builds": [
+    {
+      "chipFamily": "ESP32-C5",
+      "parts": [
+        {
+          "path": "../firmware/C5-Beat-Strip-v1.0-devkit.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
