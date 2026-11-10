@@ -57,11 +57,11 @@
       "updated": "2026-11-07"
     },
     "tdeck-beat-deck": {
-      "file": "TDeck-Beat-Deck-v1.1.bin",
-      "version": "1.1",
-      "bytes": 1224704,
-      "sha256": "109b05bb821904c352e53f6a27bd56de03f98b9b9035633d8b1ed6e1992244ee",
-      "updated": "2026-11-09"
+      "file": "TDeck-Beat-Deck-v1.2.bin",
+      "version": "1.2",
+      "bytes": 1236992,
+      "sha256": "ab1f5f71e2d51869ad06a8d40c05f3113b701c6d6f7c0b712411d01d9af7045b",
+      "updated": "2026-11-10"
     },
     "piglet-beat-badge": {
       "file": "Piglet-Beat-Badge-C5-v1.0.3.bin",
@@ -71,32 +71,32 @@
       "updated": "2026-11-07"
     },
     "beat-visualizer-ttgo": {
-      "file": "Beat-Visualizer-v1.3-ttgo.bin",
-      "version": "1.3",
-      "bytes": 1126400,
-      "sha256": "f9011ab375cdff17ebb95ba6b4511ac0586239b6096deb11b5a3b7b94bba7915",
-      "updated": "2026-11-09"
+      "file": "Beat-Visualizer-v1.4-ttgo.bin",
+      "version": "1.4",
+      "bytes": 1142784,
+      "sha256": "8ea0ab854b5f01534d9484d34eff459f6dc2a083300390ac599ca85f4ab9c2d5",
+      "updated": "2026-11-10"
     },
     "beat-visualizer-cyd": {
-      "file": "Beat-Visualizer-v1.3-cyd.bin",
-      "version": "1.3",
-      "bytes": 1138688,
-      "sha256": "744e7e69dd42d2e70b84ff957ba42cb770fca77c62abe9bcd554a0dacc1af900",
-      "updated": "2026-11-09"
+      "file": "Beat-Visualizer-v1.4-cyd.bin",
+      "version": "1.4",
+      "bytes": 1150976,
+      "sha256": "d69fc069aec596e8df637568c9bf07fc00ba45e38c83ff6a77eddb1224f2fe8b",
+      "updated": "2026-11-10"
     },
     "beat-visualizer-cyd32": {
-      "file": "Beat-Visualizer-v1.3-cyd32.bin",
-      "version": "1.3",
-      "bytes": 1138688,
-      "sha256": "4b96da4943ca36e422b36519e20adddf32ba7bb4b708476bab7b523c53688a4a",
-      "updated": "2026-11-09"
+      "file": "Beat-Visualizer-v1.4-cyd32.bin",
+      "version": "1.4",
+      "bytes": 1150976,
+      "sha256": "d0de4f15362452f61fe1a2c3f11f92e68824f90ba37f371dbe72e5d2181736b7",
+      "updated": "2026-11-10"
     },
     "beat-visualizer-phantom": {
-      "file": "Beat-Visualizer-v1.3-phantom.bin",
-      "version": "1.3",
-      "bytes": 1138688,
-      "sha256": "4441492a077afb28a6e2c038ff23d66493435e4c83be4885f31aa56d22db23ab",
-      "updated": "2026-11-09"
+      "file": "Beat-Visualizer-v1.4-phantom.bin",
+      "version": "1.4",
+      "bytes": 1155072,
+      "sha256": "3391604dfec92b74217fcefac08d00a7e2b1bbca4eaf86e228e7d46a14695574",
+      "updated": "2026-11-10"
     },
     "xiao-beat-gateway": {
       "file": "Beat-Gateway-XIAO-S3-v1.3.bin",
@@ -106,18 +106,18 @@
       "updated": "2026-11-06"
     },
     "tdongle-beat-gateway": {
-      "file": "TDongle-Beat-Gateway-v1.0.bin",
-      "version": "1.0",
-      "bytes": 1159168,
-      "sha256": "0ffae63d909352bb487675ec6795c971d64fc3cdde030946e5da36f15785d1e0",
-      "updated": "2026-11-09"
+      "file": "TDongle-Beat-Gateway-v1.1.bin",
+      "version": "1.1",
+      "bytes": 1175552,
+      "sha256": "dd1a9fbcb977486cb2fd0501cfd07dfa223892530fe063cb8f4022d193b5554e",
+      "updated": "2026-11-10"
     },
     "tdongle-beat-light": {
-      "file": "TDongle-Beat-Light-C5-v1.0.bin",
-      "version": "1.0",
-      "bytes": 1249280,
-      "sha256": "3a0b36032af6b702ecf44e618d97d489c9721b9b259a8928bef4ffb1b3a72ab8",
-      "updated": "2026-11-09"
+      "file": "TDongle-Beat-Light-C5-v1.1.bin",
+      "version": "1.1",
+      "bytes": 1265664,
+      "sha256": "9087f3f2aea9aa49dc084fd0af7d01d7f81e8d17aeee71b1bc1385a01b071e75",
+      "updated": "2026-11-10"
     },
     "c5-beat-strip-devkit": {
       "file": "C5-Beat-Strip-v1.0-devkit.bin",

@@ -1,6 +1,6 @@
 {
   "name": "Beat Visualizer (LilyGo TTGO T-Display)",
-  "version": "1.3",
+  "version": "1.4",
   "new_install_prompt_erase": true,
   "new_install_improv_wait_time": 0,
   "builds": [
@@ -8,7 +8,7 @@
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "../firmware/Beat-Visualizer-v1.3-ttgo.bin",
+          "path": "../firmware/Beat-Visualizer-v1.4-ttgo.bin",
           "offset": 0
         }
       ]

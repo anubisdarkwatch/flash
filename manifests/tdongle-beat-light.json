@@ -1,6 +1,6 @@
 {
   "name": "Beat Light (LilyGo T-Dongle C5)",
-  "version": "1.0",
+  "version": "1.1",
   "new_install_prompt_erase": true,
   "new_install_improv_wait_time": 0,
   "builds": [
@@ -8,7 +8,7 @@
       "chipFamily": "ESP32-C5",
       "parts": [
         {
-          "path": "../firmware/TDongle-Beat-Light-C5-v1.0.bin",
+          "path": "../firmware/TDongle-Beat-Light-C5-v1.1.bin",
           "offset": 0
         }
       ]
