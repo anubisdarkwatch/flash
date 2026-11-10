@@ -50,11 +50,11 @@
       "updated": "2026-11-06"
     },
     "cardputer-beat-terminal": {
-      "file": "Cardputer-Beat-Terminal-v1.0.bin",
-      "version": "1.0",
+      "file": "Cardputer-Beat-Terminal-v1.0.1.bin",
+      "version": "1.0.1",
       "bytes": 1298432,
-      "sha256": "9e7adef8db2cd5237c9aaf4ad0019bff16c2b7e437228215a60dd6c8f60c82ae",
-      "updated": "2026-11-07"
+      "sha256": "42fda9ed59198c2add0049ab02c4486f9f08d66f20951a77c8b15582066d2b24",
+      "updated": "2026-11-10"
     },
     "tdeck-beat-deck": {
       "file": "TDeck-Beat-Deck-v1.2.bin",
