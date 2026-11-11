@@ -122,6 +122,7 @@
     .steps li { padding: 10px 14px; font-size: 14px; }
   }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+.card.linked{outline:2px solid #39ff14;outline-offset:3px;box-shadow:0 0 24px rgba(57,255,20,.35)}
 </style>
 </head>
 <body>
@@ -195,7 +196,7 @@
          </esp-web-install-button>
          <a class="dl" href="firmware/${esc(fw.file)}" download>.bin</a>`
       : "";
-    return `<article class="card">
+    return `<article class="card" id="${esc(b.id)}">
       <div class="shot">${shot}<div class="chips"><span class="chip">${esc(b.role.toUpperCase())}</span><span class="chip soc">${esc(b.chip)}</span></div></div>
       <div class="body">
         <h3>${esc(b.title)}</h3>
@@ -232,6 +233,10 @@
     const opts = [{ id: "all", title: "All" }].concat(cfg.projects);
     let current = "all";
     try { const saved = localStorage.getItem("flash-filter"); if (opts.some((o) => o.id === saved)) current = saved; } catch (e) {}
+    // deep link: #<board id> (e.g. from beatcommander.online) or #<project id>
+    const hash = decodeURIComponent(location.hash.slice(1));
+    const linked = cfg.boards.find((b) => b.id === hash);
+    if (linked) current = linked.project; else if (opts.some((o) => o.id === hash)) current = hash;
     nav.innerHTML = opts.map((o) => `<button type="button" data-id="${esc(o.id)}" aria-pressed="${o.id === current}">${esc(o.title)}</button>`).join("");
     nav.addEventListener("click", (e) => {
       const btn = e.target.closest("button"); if (!btn) return;
@@ -241,6 +246,10 @@
       render(cfg, fwAll, current);
     });
     render(cfg, fwAll, current);
+    if (linked) requestAnimationFrame(() => {
+      const el = document.getElementById(linked.id);
+      if (el) { el.scrollIntoView({ block: "center" }); el.classList.add("linked"); }
+    });
   }
 
   Promise.all([
