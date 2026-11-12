@@ -125,6 +125,19 @@
       "boot": "If it won't connect: hold G0, plug in USB, let go, then INSTALL."
     },
     {
+      "id": "tembed-beat-embed",
+      "project": "beat",
+      "title": "Beat Embed",
+      "board": "LilyGo T-Embed CC1101",
+      "chip": "ESP32-S3",
+      "role": "Controller",
+      "desc": "Knob, LED ring and mic in one: follow the beat with the ring and 11 visuals, press the knob to take command and dial in the tempo, or conduct from the onboard mic and go ON AIR.",
+      "prefix": "TEmbed-Beat-Embed",
+      "image": "img/tembed-embed.jpg",
+      "erases": "The T-Embed's current firmware (Bruce / factory demo; reflash to go back).",
+      "boot": "If it won't connect: hold the knob pressed in while plugging in USB, let go, then INSTALL."
+    },
+    {
       "id": "tdeck-beat-deck",
       "project": "beat",
       "title": "Beat Deck",

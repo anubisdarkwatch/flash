@@ -1,0 +1,17 @@
+{
+  "name": "Beat Embed (LilyGo T-Embed CC1101)",
+  "version": "1.0",
+  "new_install_prompt_erase": true,
+  "new_install_improv_wait_time": 0,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "../firmware/TEmbed-Beat-Embed-v1.0.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
