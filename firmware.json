@@ -57,11 +57,11 @@
       "updated": "2026-11-10"
     },
     "tembed-beat-embed": {
-      "file": "TEmbed-Beat-Embed-v1.0.bin",
-      "version": "1.0",
+      "file": "TEmbed-Beat-Embed-v1.0.1.bin",
+      "version": "1.0.1",
       "bytes": 1163264,
-      "sha256": "327329651a9462d5768e6e06de5878faefe953343ad9ec32999a18a7f7b9eb10",
-      "updated": "2026-11-12"
+      "sha256": "c670b05f435e98c41c3caa144a01b2277a46ef9a61e485e1bd785c01f0d0aff0",
+      "updated": "2026-11-13"
     },
     "tdeck-beat-deck": {
       "file": "TDeck-Beat-Deck-v1.2.bin",
