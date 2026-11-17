@@ -1,11 +1,11 @@
 {
   "boards": {
     "w10-beat-conductor": {
-      "file": "W10-Beat-Conductor-v1.1.1.bin",
-      "version": "1.1.1",
+      "file": "W10-Beat-Conductor-v1.1.2.bin",
+      "version": "1.1.2",
       "bytes": 1011712,
-      "sha256": "0324d113206c30e565808aac696a3a3795a8fc3a55b78baf40a92e3dbcb104c7",
-      "updated": "2026-11-11"
+      "sha256": "ffa73f223f2c50364de733ac8fc4dad27685a29f2d2fe4f3c3990c657c80dd91",
+      "updated": "2026-11-17"
     },
     "beat-follower-heltec-v3": {
       "file": "Beat-Follower-HeltecV3-v1.1.bin",
@@ -111,6 +111,13 @@
       "bytes": 962560,
       "sha256": "d22f4ac9040402e4b0fc3f0a0abc1c25859671bc7a82c1030e97d05ec6abcec5",
       "updated": "2026-11-06"
+    },
+    "xiao-wio-beat-node": {
+      "file": "Beat-Node-XIAO-Wio-v1.0.bin",
+      "version": "1.0",
+      "bytes": 970752,
+      "sha256": "f9998b93284c84cad2139e93650baa4f566e20b7b90edea182efcb8927db212b",
+      "updated": "2026-11-17"
     },
     "tdongle-beat-gateway": {
       "file": "TDongle-Beat-Gateway-v1.1.bin",

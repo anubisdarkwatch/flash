@@ -27,7 +27,7 @@
       "board": "Meshnology W10",
       "chip": "ESP32-S3",
       "role": "Conductor",
-      "desc": "Hears the kick through its mic, finds the tempo and the downbeat, and broadcasts every beat on LoRa. v1.1: also relays a StickS3 (or any booth controller) at the speaker onto LoRa, with no Heltec bridge needed, and takes over from its own mic if the StickS3 goes quiet.",
+      "desc": "Hears the kick through its mic, finds the tempo and the downbeat, and broadcasts every beat on LoRa. v1.1: also relays a StickS3 (or any booth controller) at the speaker onto LoRa, with no Heltec bridge needed, and takes over from its own mic if the StickS3 goes quiet. v1.1.2: hands the relaying to a Beat Node when one is nearby.",
       "prefix": "W10-Beat-Conductor",
       "image": "img/w10-conductor.jpg",
       "erases": "Nothing: this firmware saves no settings.",
@@ -231,6 +231,19 @@
       "image": "img/beat-gateway.jpg",
       "erases": "MIDI note / transport / channel settings.",
       "boot": "Re-flashing: unplug, hold B (tiny button by the USB port), plug in, let go, INSTALL, pick \"USB JTAG/serial debug unit\". It can sit at 100% when done: unplug and replug."
+    },
+    {
+      "id": "xiao-wio-beat-node",
+      "project": "beat",
+      "title": "Beat Node",
+      "board": "Seeed XIAO ESP32-S3 + Wio-SX1262",
+      "chip": "ESP32-S3",
+      "role": "Bridge + Gateway",
+      "desc": "The Seeed LoRa kit as the whole booth link in one stick: hears the conductor on LoRa and relays every beat to the booth gear over ESP-NOW (the Heltec bridge's job), puts booth takeovers on air, and on USB is also the Beat Gateway (MIDI clock, Beat Hub feed, Tab5 radio). Several nodes sort out which one transmits. Hold the Wio button 2 s to switch bridge AUTO / ON / OFF.",
+      "prefix": "Beat-Node-XIAO-Wio",
+      "image": "img/beat-node.jpg",
+      "erases": "The kit's current firmware (Meshtastic; reflash it from flasher.meshtastic.org to go back) and the node's bridge / MIDI settings.",
+      "boot": "Hold B (the tiny BOOT button on the XIAO) while plugging in, let go, then INSTALL. Screw the LoRa antenna on before powering it."
     },
     {
       "id": "tdongle-beat-gateway",
